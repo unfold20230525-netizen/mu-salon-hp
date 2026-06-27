@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MU HAIR CREATIVE SALON | 福島県郡山市の美容室</title>
+<meta name="description" content="MU HAIR CREATIVE SALON - Beauty Transcends Ascension. 福島県郡山市本町の美容室。似合わせカット・METEO髪質改善を中心に、人生史上最高のヘアスタイルを。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@400;500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER / NAV
+     ============================================================ -->
+<header id="siteHeader">
+  <a href="#top" class="nav-logo-link">
+    <img class="nav-logo" src="assets/images/logo/logo.png" alt="MU HAIR CREATIVE SALON">
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#concept">コンセプト</a>
+    <a href="#staff">スタイリスト</a>
+    <a href="#catalog">ヘアカタログ</a>
+    <a href="#products">自社商品</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <a class="nav-cta" href="#reserve">ご予約</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============================================================
+     1. トップ画面 — フルHD背景動画 + 店名
+     差し替え手順:
+       1. assets/video/promo.mp4 に横画面フルHDのプロモーション動画を配置
+       2. assets/video/promo-poster.jpg に動画の代表的な1コマ(読み込み中/再生不可時の表示用)を配置
+     ============================================================ -->
+<section class="video-hero" id="top">
+  <video
+    class="video-hero-bg"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="assets/video/promo-poster.jpg">
+    <source src="assets/video/promo.mp4" type="video/mp4">
+  </video>
+  <div class="video-hero-overlay"></div>
+  <div class="video-hero-content">
+    <img class="hero-logo" src="assets/images/logo/logo.png" alt="MU HAIR CREATIVE SALON">
+  </div>
+  <div class="scroll-cue">
+    <div class="line"></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. ヒーロー / コンセプトセクション
+     ============================================================ -->
+<section class="concept" id="concept">
+  <div class="section-inner reveal">
+    <span class="eyebrow">Philosophy</span>
+    <p class="concept-quote">Beauty Transcends Ascension</p>
+    <p class="concept-quote-jp">美しさが、次元を越える。</p>
+  </div>
+</section>
+
+<hr class="hairline-gold">
+
+<!-- ============================================================
+     3. スタイリスト紹介
+     差し替え手順:
+       assets/images/staff/matsubara.jpg にスタイリストの写真を配置
+     ============================================================ -->
+<section class="staff" id="staff">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow">Stylist</span>
+      <h2>スタイリスト紹介</h2>
+    </div>
+
+    <div class="staff-card reveal">
+      <div class="staff-photo">
+        <img src="assets/images/staff/matsubara.png" alt="松原基起">
+      </div>
+      <div class="staff-text">
+        <h3 class="staff-name">松原 基起<span class="staff-name-en">Motoki Matsubara</span></h3>
+        <p class="staff-comment">
+          店をご覧頂きありがとうございます。【MU】では優雅に過ごしていただくため
+          私が設計した一席の空間でゆったりとお過ごしいただけます。
+          施術面では【似合わせカット】【METEO髪質改善】を中心に
+          人生史上最高のヘアスタイルを提供します。
+          また自らヘアケア用品も製作しており、ご自宅でのケアもお悩みの方はご相談ください。
+        </p>
+        <div class="staff-tags">
+          <span class="staff-tag">似合わせカット</span>
+          <span class="staff-tag">METEO髪質改善</span>
+          <span class="staff-tag">オリジナルヘアケア</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. ヘアカタログ — レディース / メンズ
+     差し替え手順:
+       assets/images/catalog/ladies.jpg
+       assets/images/catalog/mens.jpg
+       href は一覧ページが出来たらリンク先を変更
+     ============================================================ -->
+<section class="catalog" id="catalog">
+  <div class="section-inner reveal">
+    <div class="section-head">
+      <span class="eyebrow">Hair Catalog</span>
+      <h2>ヘアカタログ</h2>
+      <p class="lead">気になるスタイルから、なりたい自分を見つけてください。</p>
+    </div>
+
+    <div class="catalog-grid">
+      <a class="catalog-card" href="catalog-ladies.html">
+        <div class="catalog-img">
+          <img src="assets/images/catalog/ladies.jpg" alt="レディースヘアカタログ">
+        </div>
+        <div class="catalog-label">
+          <span>LADIES</span>
+          <span class="catalog-label-jp">レディース</span>
+        </div>
+      </a>
+      <a class="catalog-card" href="catalog-mens.html">
+        <div class="catalog-img">
+          <img src="assets/images/catalog/mens.jpg" alt="メンズヘアカタログ">
+        </div>
+        <div class="catalog-label">
+          <span>MEN'S</span>
+          <span class="catalog-label-jp">メンズ</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. 自社商品紹介
+     差し替え手順:
+       assets/images/products/ に商品画像を追加
+       各カードの href を購入ページURLに変更
+       カードは .product-card をコピーして増減可能
+     ============================================================ -->
+<section class="products" id="products">
+  <div class="section-inner reveal">
+    <div class="section-head">
+      <span class="eyebrow">Original Products</span>
+      <h2>自社商品紹介</h2>
+      <p class="lead">サロン発、ご自宅でのヘアケアのためにスタイリストが製作したオリジナルアイテム。</p>
+    </div>
+
+    <div class="product-grid">
+      <a class="product-card" href="#">
+        <div class="product-img">
+          <img src="assets/images/products/product-01.jpg" alt="商品名 01">
+        </div>
+        <div class="product-info">
+          <h3>商品名が入ります</h3>
+          <p class="product-price">¥0,000</p>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">
+          <img src="assets/images/products/product-02.jpg" alt="商品名 02">
+        </div>
+        <div class="product-info">
+          <h3>商品名が入ります</h3>
+          <p class="product-price">¥0,000</p>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">
+          <img src="assets/images/products/product-03.jpg" alt="商品名 03">
+        </div>
+        <div class="product-info">
+          <h3>商品名が入ります</h3>
+          <p class="product-price">¥0,000</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline-gold">
+
+<!-- ============================================================
+     6. 予約セクション
+     ============================================================ -->
+<section class="reserve" id="reserve">
+  <div class="section-inner reveal">
+    <div class="section-head">
+      <span class="eyebrow">Reservation</span>
+      <h2>ご予約</h2>
+      <p class="lead">ご希望のご予約方法をお選びください。</p>
+    </div>
+
+    <div class="reserve-buttons">
+      <a class="btn-reserve" href="https://beauty.hotpepper.jp/slnH000782382/?wak=CPMY100402_link_reservesalon_salon_beauty_20260529" target="_blank" rel="noopener">
+        <span>ホットペッパービューティーで予約</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn-reserve line" href="https://line.me/R/ti/p/@578xdtvt" target="_blank" rel="noopener">
+        <span>公式LINEで予約・お問い合わせ</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. アクセス
+     ============================================================ -->
+<section class="access" id="access">
+  <div class="section-inner reveal">
+    <div class="section-head">
+      <span class="eyebrow">Access</span>
+      <h2>アクセス</h2>
+    </div>
+
+    <div class="access-grid">
+      <div>
+        <div class="info-block">
+          <span class="label">Salon</span>
+          <p class="value">MU HAIR CREATIVE SALON</p>
+        </div>
+        <div class="info-block">
+          <span class="label">Address</span>
+          <p class="value">〒963-8002<br>福島県郡山市本町1丁目11-12</p>
+        </div>
+        <div class="info-block">
+          <span class="label">Access</span>
+          <p class="value">JR郡山駅より徒歩圏内</p>
+        </div>
+        <div class="info-block">
+          <span class="label">Business Hours</span>
+          <table class="hours-table">
+            <tr><td>月曜日〜土曜日</td><td>10:00 - 20:00</td></tr>
+            <tr><td>日曜日</td><td>10:00 - 18:00</td></tr>
+            <tr class="closed"><td>定休日</td><td>火曜日</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <iframe class="map-frame" loading="lazy" src="https://www.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%83%A1%E5%B1%B1%E5%B8%82%E6%9C%AC%E7%94%BA1%E4%B8%81%E7%9B%AE11-12&output=embed" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <img class="footer-logo" src="assets/images/logo/logo.png" alt="MU HAIR CREATIVE SALON">
+  <div class="footer-links">
+    <a href="#concept">コンセプト</a>
+    <a href="#staff">スタイリスト</a>
+    <a href="#catalog">ヘアカタログ</a>
+    <a href="#products">自社商品</a>
+    <a href="#access">アクセス</a>
+  </div>
+  <div class="footer-bottom">
+    &copy; MU HAIR CREATIVE SALON. All Rights Reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
