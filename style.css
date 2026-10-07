@@ -235,30 +235,183 @@ section{
 }
 
 /* ============================================================
-   2. CONCEPT
+   2. CONCEPT — Block 1
    ============================================================ */
 .concept{
   background:var(--color-bg);
+  padding:110px 6vw 80px;
+}
+
+/* Block 1 ヘッド */
+.concept-head{
   text-align:center;
-  padding:110px 6vw;
+  max-width:700px;
+  margin:0 auto 72px;
 }
-.concept-quote{
-  font-family:var(--font-display);
-  font-style:italic;
-  font-weight:300;
-  font-size:clamp(22px, 3vw, 36px);
-  color:var(--color-gold-light);
-  letter-spacing:0.02em;
-  line-height:1.5;
-  max-width:760px;
-  margin:0 auto 18px;
-}
-.concept-quote-jp{
+.concept-title{
   font-family:var(--font-body);
-  font-size:clamp(20px, 2.4vw, 28px);
+  font-weight:400;
+  font-size:clamp(26px, 3.2vw, 38px);
+  letter-spacing:0.1em;
+  color:var(--color-fg);
+  margin:14px auto 24px;
+}
+.concept-rule{
+  width:40px;
+  height:1px;
+  background:var(--color-gold);
+  margin:0 auto 24px;
+}
+.concept-lead{
+  font-family:var(--font-body);
+  font-size:clamp(14px, 1.4vw, 16px);
+  font-weight:300;
+  color:var(--color-fg-dim);
+  line-height:2;
+  letter-spacing:0.04em;
+}
+
+/* Block 1 フォトグリッド */
+.concept-photo-grid{
+  display:grid;
+  grid-template-columns:1fr 1.1fr 1fr;
+  gap:12px;
+  align-items:start;
+  max-width:1100px;
+  margin:0 auto 72px;
+}
+.cpg-item{ display:flex; flex-direction:column; gap:16px; }
+.cpg-img{
+  width:100%;
+  overflow:hidden;
+}
+.cpg-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.7s ease;
+}
+.cpg-img:hover img{ transform:scale(1.03); }
+.cpg-caption{
+  text-align:center;
+  padding:0 8px;
+}
+.cpg-rule{
+  width:32px;
+  height:1px;
+  background:var(--color-gold);
+  margin:0 auto 12px;
+}
+.cpg-caption p{
+  font-family:var(--font-body);
+  font-size:clamp(11px, 1.1vw, 13px);
+  font-weight:300;
+  color:var(--color-fg-dim);
+  line-height:1.85;
+  letter-spacing:0.04em;
+}
+
+/* Block 1 クロージング */
+.concept-closing{
+  text-align:center;
+  max-width:620px;
+  margin:0 auto;
+}
+.concept-closing-p1{
+  font-family:var(--font-body);
+  font-size:clamp(14px, 1.5vw, 17px);
   font-weight:400;
   color:var(--color-fg);
   letter-spacing:0.06em;
+  margin-bottom:24px;
+}
+.concept-closing-p2{
+  font-family:var(--font-body);
+  font-size:clamp(13px, 1.3vw, 15px);
+  font-weight:300;
+  color:var(--color-fg-dim);
+  line-height:2;
+  letter-spacing:0.04em;
+}
+
+/* ============================================================
+   2b. CONCEPT — Block 2: MUが大切にしていること
+   ============================================================ */
+.concept-b2{
+  background:var(--color-bg-alt);
+  padding:100px 6vw;
+}
+.cb2-item{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:center;
+  max-width:1080px;
+  margin:0 auto 80px;
+}
+.cb2-item:last-child{ margin-bottom:0; }
+.cb2-item--reverse .cb2-img{ order:2; }
+.cb2-item--reverse .cb2-text{ order:1; }
+.cb2-img{
+  overflow:hidden;
+}
+.cb2-img img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.7s ease;
+}
+.cb2-img:hover img{ transform:scale(1.04); }
+.cb2-text{ padding:8px 0; }
+.cb2-num{
+  font-family:var(--font-display-sc);
+  font-size:12px;
+  letter-spacing:0.3em;
+  color:var(--color-gold);
+  display:block;
+  margin-bottom:10px;
+}
+.cb2-rule{
+  width:28px;
+  height:1px;
+  background:var(--color-gold);
+  margin-bottom:20px;
+}
+.cb2-heading{
+  font-family:var(--font-body);
+  font-weight:400;
+  font-size:clamp(20px, 2.2vw, 26px);
+  letter-spacing:0.06em;
+  line-height:1.65;
+  color:var(--color-fg);
+  margin-bottom:18px;
+}
+.cb2-body{
+  font-family:var(--font-body);
+  font-size:clamp(13px, 1.3vw, 15px);
+  font-weight:300;
+  color:var(--color-fg-dim);
+  line-height:2;
+  letter-spacing:0.04em;
+}
+
+/* Concept responsive */
+@media(max-width:768px){
+  .concept-photo-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    max-width:480px;
+  }
+  .cpg-img{ aspect-ratio:4/3 !important; }
+  .cb2-item,
+  .cb2-item--reverse{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .cb2-item--reverse .cb2-img{ order:0; }
+  .cb2-item--reverse .cb2-text{ order:0; }
 }
 
 /* ============================================================
@@ -325,97 +478,170 @@ section{
 /* ============================================================
    4. HAIR CATALOG
    ============================================================ */
-.catalog{background:var(--color-bg);}
-.catalog-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+/* ============================================================
+   4. CATALOG — アコーディオン
+   ============================================================ */
+.catalog{ background:var(--color-bg); }
+
+/* アコーディオン共通 */
+.acc-block{
+  border-bottom:1px solid var(--color-line);
+  max-width:1080px;
+  margin:0 auto;
 }
-.catalog-card{
+.acc-block:first-of-type{ border-top:1px solid var(--color-line); }
+.acc-trigger{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px 0;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:var(--color-fg);
+  text-align:left;
+}
+.acc-trigger:hover .acc-label{ color:var(--color-gold-light); }
+.acc-label{
+  font-family:var(--font-body);
+  font-size:clamp(15px, 1.6vw, 18px);
+  font-weight:400;
+  letter-spacing:0.08em;
+  transition:color 0.3s ease;
+}
+.acc-icon{
   position:relative;
-  display:block;
-  overflow:hidden;
-  aspect-ratio:4/5;
-  background:#15140f;
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+  border:1px solid var(--color-gold);
+  border-radius:50%;
 }
-.catalog-img{
-  position:absolute;
-  inset:0;
-}
-.catalog-img img{
-  width:100%;height:100%;
-  object-fit:cover;
-  transition:transform 0.7s ease, filter 0.5s ease;
-  filter:grayscale(0.1) brightness(0.85);
-}
-.catalog-card:hover .catalog-img img{
-  transform:scale(1.06);
-  filter:grayscale(0) brightness(0.95);
-}
-.catalog-card::after{
+.acc-icon::before,
+.acc-icon::after{
   content:'';
   position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(10,10,9,0.78) 0%, rgba(10,10,9,0.1) 55%, transparent 100%);
+  top:50%;left:50%;
+  background:var(--color-gold);
+  transform:translate(-50%,-50%);
+  transition:opacity 0.3s ease, transform 0.3s ease;
 }
-.catalog-label{
-  position:absolute;
-  left:0;bottom:0;right:0;
-  z-index:2;
-  padding:34px;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-.catalog-label span:first-child{
-  font-family:var(--font-display);
-  font-style:italic;
-  font-weight:400;
-  font-size:30px;
-  color:var(--color-fg);
-  letter-spacing:0.04em;
-}
-.catalog-label-jp{
-  font-family:var(--font-display-sc);
-  font-size:12px;
-  letter-spacing:0.24em;
-  color:var(--color-gold-light);
+.acc-icon::before{ width:10px; height:1px; }
+.acc-icon::after{ width:1px; height:10px; }
+.acc-trigger[aria-expanded="true"] .acc-icon::after{
+  transform:translate(-50%,-50%) rotate(90deg);
+  opacity:0;
 }
 
-/* ============================================================
-   5. PRODUCTS
-   ============================================================ */
-.products{background:var(--color-bg-alt);}
-.product-grid{
+/* パネル */
+.acc-panel{
+  overflow:hidden;
+  max-height:0;
+  transition:max-height 0.55s ease;
+}
+.acc-panel.is-open{
+  max-height:4000px;
+}
+
+/* カタログ写真グリッド */
+.catalog-photo-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:40px;
+  gap:10px;
+  padding:10px 0 32px;
 }
-.product-card{display:block;}
-.product-img{
-  aspect-ratio:1/1;
+.cpg-photo{
+  aspect-ratio:3/4;
   overflow:hidden;
   background:#15140f;
-  border:1px solid var(--color-line);
-  margin-bottom:20px;
 }
-.product-img img{
+.cpg-photo img{
   width:100%;height:100%;
   object-fit:cover;
   transition:transform 0.6s ease;
+  display:block;
 }
-.product-card:hover .product-img img{transform:scale(1.05);}
-.product-info h3{
+.cpg-photo:hover img{ transform:scale(1.05); }
+
+/* ============================================================
+   5. HAIR ITEMS — アコーディオン
+   ============================================================ */
+.products{ background:var(--color-bg-alt); }
+
+/* 商品グリッド */
+.item-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:28px;
+  padding:10px 0 32px;
+}
+.item-card{
+  display:flex;
+  flex-direction:column;
+  background:var(--color-bg);
+  border:1px solid var(--color-line);
+  overflow:hidden;
+  text-decoration:none;
+  transition:border-color 0.3s ease;
+}
+.item-card:hover{ border-color:var(--color-gold); }
+.item-img{
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#15140f;
+}
+.item-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 0.6s ease;
+  display:block;
+}
+.item-card:hover .item-img img{ transform:scale(1.05); }
+.item-info{
+  padding:18px 20px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  flex:1;
+}
+.item-info h3{
   font-family:var(--font-body);
   font-weight:400;
-  font-size:15.5px;
+  font-size:15px;
   color:var(--color-fg);
-  margin-bottom:8px;
+  letter-spacing:0.04em;
 }
-.product-price{
-  font-family:var(--font-display);
-  font-size:18px;
-  color:var(--color-gold-light);
+.item-desc{
+  font-family:var(--font-body);
+  font-size:12.5px;
+  font-weight:300;
+  color:var(--color-fg-dim);
+  line-height:1.75;
+  flex:1;
+}
+.item-detail-btn{
+  display:inline-block;
+  margin-top:8px;
+  font-family:var(--font-display-sc);
+  font-size:11px;
+  letter-spacing:0.22em;
+  color:var(--color-gold);
+  border-bottom:1px solid var(--color-gold);
+  padding-bottom:2px;
+  align-self:flex-start;
+  transition:opacity 0.3s ease;
+}
+.item-card:hover .item-detail-btn{ opacity:0.7; }
+
+/* レスポンシブ */
+@media(max-width:768px){
+  .catalog-photo-grid{ grid-template-columns:repeat(2,1fr); }
+  .item-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:480px){
+  .catalog-photo-grid{ grid-template-columns:1fr 1fr; gap:6px; }
+  .item-grid{ grid-template-columns:1fr; }
 }
 
 /* ============================================================

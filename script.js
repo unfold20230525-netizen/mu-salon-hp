@@ -37,3 +37,36 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 revealEls.forEach((el) => observer.observe(el));
+
+// ============================================================
+// accordion — catalog & hair items
+// ============================================================
+document.querySelectorAll('.acc-trigger').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const panelId = btn.dataset.target;
+    const panel = document.getElementById(panelId);
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    if (isOpen) {
+      // 閉じる
+      btn.setAttribute('aria-expanded', 'false');
+      panel.classList.remove('is-open');
+      // アニメーション後に hidden を付与
+      panel.addEventListener('transitionend', () => {
+        if (!panel.classList.contains('is-open')) {
+          panel.hidden = true;
+        }
+      }, { once: true });
+    } else {
+      // 開く
+      panel.hidden = false;
+      // 次フレームでクラス付与（transition を効かせるため）
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          panel.classList.add('is-open');
+        });
+      });
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
